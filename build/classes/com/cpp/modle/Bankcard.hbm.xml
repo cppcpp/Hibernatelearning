@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-4-1 8:59:01 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.cpp.modle.Bankcard" table="bankcard" catalog="test">
+        <id name="BId" type="int">
+            <column name="b_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="BNumber" type="string">
+            <column name="b_number" length="20" />
+        </property>
+        <property name="BTime" type="time">
+            <column name="b_time" length="8" />
+        </property>
+        
+        <!--外键：e_id  unique=true:表示多的一方也必须唯一  cascade=all：根据银行卡号能找到员工信息-->
+        <many-to-one name="employee" class="com.cpp.modle.Employee"
+            unique="true" cascade="all">
+            <column name="e_id" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

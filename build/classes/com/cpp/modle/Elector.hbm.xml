@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-27 11:24:19 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.cpp.modle.Elector" table="elector" catalog="test">
+        <id name="name" type="string">
+            <column name="name" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" length="10" not-null="true" />
+        </property>
+        <property name="count" type="string">
+            <column name="count" length="10" />
+        </property>
+        <property name="flag" type="string">
+            <column name="flag" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

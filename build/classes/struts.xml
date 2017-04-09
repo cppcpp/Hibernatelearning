@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="userPackage" extends="struts-default,json-default">
+        <action name="query_*" class="com.cpp.action.UserAction" method="{1}">
+            <result name="success" type="json">
+                <!-- 表示输出result的所有属性       result是action的变量（需getset方法）-->
+                <param name="root">result</param>
+            </result>
+        </action>
+    </package>
+</struts>

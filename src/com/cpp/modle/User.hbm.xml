@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-27 11:24:19 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.cpp.modle.User" table="user" catalog="test">
+       <!-- Hibernate必须要有主键，来区分两条数据的不同 -->
+       <id name="name" type="string">
+		    <column name="name" length="10" />
+		   <!-- assigned表示必须由用户赋值 -->
+		   <generator class="assigned"/>
+		</id> 
+        
+		<property name="password" type="string">
+		    <column name="password" length="10" />
+		</property>        
+    </class>
+</hibernate-mapping>
